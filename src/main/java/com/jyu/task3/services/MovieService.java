@@ -1,15 +1,14 @@
-package com.jyu.task3.api;
+package com.jyu.task3.services;
 
 import com.jyu.task3.user.User;
 import com.jyu.task3.user.Users;
 
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 
 @Path("/movies")
-public class MovieApi {
+public class MovieService {
 
   //return movies list
   @GET

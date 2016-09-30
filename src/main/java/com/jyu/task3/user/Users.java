@@ -1,8 +1,6 @@
 package com.jyu.task3.user;
 
-/**
- * Created by civi on 26/04/16.
- */
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,10 +1,6 @@
 package com.jyu.task3.user;
 
 
-/**
- * Created by civi on 26/04/16.
- */
-
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 

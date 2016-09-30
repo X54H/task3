@@ -1,4 +1,4 @@
-package com.jyu.task3.api;
+package com.jyu.task3.services;
 
 
 import javax.ws.rs.Consumes;
@@ -9,11 +9,12 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import com.jyu.task3.comment.CommentResource;
 import com.jyu.task3.user.User;
 import com.jyu.task3.user.Users;
 
 @Path("/users")
-public class UserApi {
+public class UserService {
 
     private Users userslist;
 
@@ -26,7 +27,7 @@ public class UserApi {
 
     }
 
-    //you can inser an user
+    //you can insert an user
     @Path("add")
     @POST
     @Consumes({"application/json", "application/xml"})
@@ -48,4 +49,9 @@ public class UserApi {
             return Response.status(Response.Status.NOT_FOUND).build();
     }
 
+    //nested comments
+    @Path("/{name}/comments")
+    public CommentResource getCommentResource() {
+        return new CommentResource();
+    }
 }
