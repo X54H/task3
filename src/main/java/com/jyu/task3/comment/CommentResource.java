@@ -3,16 +3,20 @@ package com.jyu.task3.comment;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 @Path("/")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class CommentResource {
-    private Comments commentsList = new Comments();
+    private Comments commentsList;
+
+    public CommentResource(String name){
+        this.commentsList = Comments.getInstance(name);
+        System.out.println(name);
+    }
 
     @GET
-    public Response getCommentslist(@PathParam("userID") int UserID){
+    public Response getCommentslist(){
         return Response.ok(commentsList).build();
     }
 

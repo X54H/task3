@@ -1,28 +1,27 @@
 package com.jyu.task3.comment;
 
 
-import java.util.Date;
-
 public class Comment {
 
-    private int id;
+    private String id;
     private String author;
     private String text;
-    private Date date;
+    private String date;
 
+    public Comment(){}
 
-    public Comment(int id, String author, String text, Date date) {
+    public Comment(String id, String author, String text, String date) {
         this.id = id;
         this.author = author;
         this.text = text;
         this.date = date;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,11 +41,11 @@ public class Comment {
         this.text = text;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }

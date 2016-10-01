@@ -2,7 +2,6 @@ package com.jyu.task3.user;
 
 
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Date;
 
 @XmlRootElement
 public class User {
@@ -11,12 +10,12 @@ public class User {
     private String name;
     private String surname;
     private String nickname;
-    private Date birth;
+    private String birth;
     private String age;
 
     public User(){}
 
-    public User(int id, String name, String surname, String nickname, Date birth, String age) {
+    public User(int id, String name, String surname, String nickname, String birth, String age) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -45,9 +44,9 @@ public class User {
 
     public void setNickname(String nickname) {this.nickname = nickname;}
 
-    public Date getBirth() {return birth;}
+    public String getBirth() {return birth;}
 
-    public void setBirth(Date birth) {this.birth = birth;}
+    public void setBirth(String birth) {this.birth = birth;}
 
     public String getAge() {   return age;}
 

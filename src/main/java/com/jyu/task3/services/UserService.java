@@ -51,7 +51,7 @@ public class UserService {
 
     //nested comments
     @Path("/{name}/comments")
-    public CommentResource getCommentResource() {
-        return new CommentResource();
+    public CommentResource getCommentResource(@PathParam("name") String name) {
+        return new CommentResource(name);
     }
 }
